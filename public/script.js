@@ -1,24 +1,25 @@
-document
-.getElementById("contactForm")
-.addEventListener("submit", async(e)=>{
+document.getElementById("contactForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-e.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-const data = {
- name: document.getElementById("name").value,
- email: document.getElementById("email").value,
- message: document.getElementById("message").value
-};
+    const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            email,
+            message
+        })
+    });
 
-const res = await fetch("/contact",{
- method:"POST",
- headers:{
-  "Content-Type":"application/json"
- },
- body:JSON.stringify(data)
-});
+    const data = await response.json();
 
-const result = await res.json();
+    alert(data.message);
 
-alert(result.message);
+    document.getElementById("contactForm").reset();
 });
