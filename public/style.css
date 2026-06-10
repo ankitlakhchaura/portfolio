@@ -1,0 +1,141 @@
+body{
+font-family:Arial;
+margin:0;
+padding:0;
+}
+
+header{
+background:#2563eb;
+color:white;
+padding:50px;
+text-align:center;
+}
+
+section{
+padding:30px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+background:#2563eb;
+color:white;
+border:none;
+padding:10px 20px;
+}
+
+.hero{
+    text-align:center;
+    padding:100px 20px;
+    background:#2563eb;
+    color:white;
+}
+
+.skills span{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:10px 15px;
+    margin:5px;
+    border-radius:20px;
+}
+
+.project-card{
+    padding:20px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.profile{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:#111;
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.project-card{
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.hero button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#2563eb;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero{
+    padding:60px 20px;
+    background:linear-gradient(135deg,#2563eb,#0ea5e9);
+}
+
+.profile{
+    width:120px;
+    height:120px;
+}
+}
+
+a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+a:hover{
+    text-decoration:underline;
+}
